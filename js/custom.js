@@ -103,3 +103,28 @@ window.onload = function () {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 2px solid #E83C19 }";
     document.body.appendChild(css);
 };
+
+
+gsap.utils.toArray(".fmgg-sec .left-part").forEach((el) => {  
+  const btn = el.querySelector('.fmgg-sec .left-part .btn'),
+        setX = gsap.quickSetter(btn, "x", "px"),
+        setY = gsap.quickSetter(btn, "y", "px"),
+        align = e => {
+          const top = el.getBoundingClientRect().top;
+          setX(e.clientX );
+          setY(e.clientY - top);
+        },
+        startFollow = () => document.addEventListener("mousemove", align),
+        stopFollow = () => document.removeEventListener("mousemove", align),
+        fade = gsap.to(btn, {autoAlpha: 1, ease: "none", paused: true, onReverseComplete: stopFollow});
+  
+  el.addEventListener('mouseenter', (e) => {
+    fade.play();
+    startFollow();
+    align(e);
+  });
+  
+  el.addEventListener('mouseleave', () => fade.reverse());
+ 
+});
+
