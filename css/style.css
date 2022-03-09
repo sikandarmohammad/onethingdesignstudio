@@ -188,7 +188,7 @@ header .container {
    text-transform: capitalize;
    margin-bottom: 40px;
 
-} 
+}
 .banner-sec p{ 
    color:rgb(15 14 14 / 60%);
    font-size: 24px;
@@ -197,10 +197,11 @@ header .container {
    margin-bottom: 64px;
 }
 .banner-sec .container{
-   max-width: 750px;
+   max-width: 800px;
 }
 .banner-sec p{
    margin-right: 35px;
+   max-width: 620px;
 }
 .grd-box {
    position: relative;
@@ -226,10 +227,6 @@ header .container {
 }
 
 /***********************  fmgg-sec ****************************/
-
-/* .fmgg-sec  + .fmgg-sec {
-   margin-top: 125px;
-} */
 
 .fmgg-sec .container {
    display: flex;
@@ -260,7 +257,6 @@ header .container {
    letter-spacing: 2px;
    font-family: 'Neue Haas Grotesk Display Pro';
 }
-
 .fmgg-sec .container .right-part p{
    font-weight: 400;
    color: #696767;
@@ -269,7 +265,6 @@ header .container {
    font-family: 'Work Sans', sans-serif;
    margin-bottom: 48px;
 }
-
 .fmgg-sec .container .right-part .btn {
    box-shadow: none;
    outline: none;
@@ -281,7 +276,6 @@ header .container {
    overflow: hidden;
    transition: all .3s;
 }
-
 .fmgg-sec .container .right-part .btn:before {
   content: "";
   position: absolute;
@@ -290,18 +284,18 @@ header .container {
   top: 0;
   left: -100%;
   z-index: -1;
-  background: linear-gradient(to right, #fa9292, #c12f2f, #e24580);
+  
   transition: all .3s;
 }
-.fmgg-sec .container .right-part .btn:hover {
-		color: #fff;
+.fmgg-sec .container .right-part .btn:hover { 
+   color: #fff;
 }
 .fmgg-sec .container .right-part .btn:hover::before {
 	left: 0%;
-	transition: all .3s; 
+	transition: all .3s;
+   background: linear-gradient(to right, #fa9292, #c12f2f, #e24580); 
 }
-.fmgg-sec .container .right-part .btn:before,
-.fmgg-sec .container .right-part .btn:after  {
+.fmgg-sec .container .right-part .btn:before {
    content: "";
    position: absolute;
    display: block;
@@ -311,27 +305,19 @@ header .container {
    left: 0;
    z-index: -1;
 }
-.fmgg-sec .container .right-part .btn:before{
+/*.fmgg-sec .container .right-part .btn:before{
 	transform: translate3d(-100%, 0, 0);
 	 background-color: #fff;
 	 border: 1px solid #fff;
 	 transition: transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+*/
 
-.fmgg-sec .container .right-part .btn:after{
-	background-color: #f5fa60;
-   border: 1px solid #f5fa60;
-   transform: translate3d(100%, 0, 0);
-   transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
-}
 
-.fmgg-sec .container .right-part .btn:hover::before {
+/*.fmgg-sec .container .right-part .btn:hover::before {
  transform: translate3d(0, 0, 0);
-}
+}*/
 
-.fmgg-sec .container .right-part .btn:hover::after {
- transform: translate3d(0, 0, 0);
-}
 
 
 
