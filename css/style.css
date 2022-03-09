@@ -1,27 +1,27 @@
- @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
- @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../fonts/NeueHaasDisplay-Bold.eot');
-    src: url('../fonts/NeueHaasDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeueHaasDisplay-Bold.woff2') format('woff2'),
-        url('../fonts/NeueHaasDisplay-Bold.woff') format('woff'),
-        url('../fonts/NeueHaasDisplay-Bold.ttf') format('truetype'),
-        url('../fonts/NeueHaasDisplay-Bold.svg#NeueHaasDisplay-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+@font-face {
+   font-family: 'Neue Haas Grotesk Display Pro';
+   src: url('../fonts/NeueHaasDisplay-Bold.eot');
+   src: url('../fonts/NeueHaasDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+	   url('../fonts/NeueHaasDisplay-Bold.woff2') format('woff2'),
+	   url('../fonts/NeueHaasDisplay-Bold.woff') format('woff'),
+	   url('../fonts/NeueHaasDisplay-Bold.ttf') format('truetype'),
+	   url('../fonts/NeueHaasDisplay-Bold.svg#NeueHaasDisplay-Bold') format('svg');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
 }
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../fonts/NeueHaasDisplay-Mediu.eot');
-    src: url('../fonts/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeueHaasDisplay-Mediu.woff2') format('woff2'),
-        url('../fonts/NeueHaasDisplay-Mediu.woff') format('woff'),
-        url('../fonts/NeueHaasDisplay-Mediu.ttf') format('truetype'),
-        url('../fonts/NeueHaasDisplay-Mediu.svg#NeueHaasDisplay-Mediu') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+   font-family: 'Neue Haas Grotesk Display Pro';
+   src: url('../fonts/NeueHaasDisplay-Mediu.eot');
+   src: url('../fonts/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
+	   url('../fonts/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+	   url('../fonts/NeueHaasDisplay-Mediu.woff') format('woff'),
+	   url('../fonts/NeueHaasDisplay-Mediu.ttf') format('truetype'),
+	   url('../fonts/NeueHaasDisplay-Mediu.svg#NeueHaasDisplay-Mediu') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
 }
 
 
@@ -36,29 +36,29 @@ overflow-x: hidden;
 /*cursor: none;*/
 }
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
 a {	
-	text-decoration: none;
+   text-decoration: none;
 }
 ul,li,ol {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 p{
-	font-family: 'Work Sans', sans-serif;
-	font-size: 16px;
-	color: #696767;
+   font-family: 'Work Sans', sans-serif;
+   font-size: 16px;
+   color: #696767;
 }
 
 p:empty{
-	display: none;
+   display: none;
 }
 p:last-child{
-	margin-bottom: 0px;
+   margin-bottom: 0px;
 }
 /******************** cursor *******************/
 
@@ -83,13 +83,34 @@ p:last-child{
     border: none;
     position: fixed;
     border: 1px solid rgb(0 0 0 / 10%);
+   position: fixed;
+   width: 48px;
+   height: 48px;
+   margin-left: -5px;
+   margin-top: -5px;
+   border-radius: 50%;   
+   transition: transform .3s ease;
+   transform-origin: center center;
+   pointer-events: none;
+   background: rgba(250, 250, 250, 0.6);
+   z-index: 1;
+   /*mix-blend-mode: difference;*/
+   border: 2px solid #FFFFFF;
 
+}
+
+.grow, .grow-small{
+   transform: scale(2);
+   background: #fff;
+    border: 2px solid #000;
+   border: none;
 }
  .grow-small:after{
  	position: absolute;
  	content: "";
- 	background: linear-gradient(to top, red , blue); 	  	
-  	filter: blur(300px);
+ 	background: linear-gradient(to top, red , blue ); 	  	
+  	filter: blur(500px);
+    border: 2px solid #000;
   	transform:  scale(2);
   	width: 100%;
   	height: 100%;
@@ -101,164 +122,164 @@ p:last-child{
 
 .logo { width: 250px}
 header {
-	padding: 25px 0;
+   padding: 25px 0;
 }
 
 header .container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 1288px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 1288px;
 }
 
 .menu-bar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .menu-bar > li > a{
-		color: #0F0E0E;	
-		font-size: 18px;
-	    font-family: 'Work Sans', sans-serif;
-	    font-weight: 500;
-	    transition: all 0.3s;
+	   color: #0F0E0E;	
+	   font-size: 18px;
+	   font-family: 'Work Sans', sans-serif;
+	   font-weight: 500;
+	   transition: all 0.3s;
 }
 .menu-bar > li > a:hover {
-  background: -webkit-linear-gradient(#EF8081 100%, #F63132 100%, #9F1689 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s;
+ background: -webkit-linear-gradient(#EF8081 100%, #F63132 100%, #9F1689 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ transition: all 0.3s;
 }
 .menu-bar > li + li {
-	margin-left: 72px;
+   margin-left: 72px;
 }
 .hamburger {
-	position: relative;
-	width: 23px;
-	height: 15px;
+   position: relative;
+   width: 23px;
+   height: 15px;
 }
 .hamburger:before, .hamburger:after {
-	position: absolute;
-	content: "";
-	left: 0;
-	top: 2px;
-	width: 22px;
-	height: 2px;
-	background: #0F0E0E;
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 2px;
+   width: 22px;
+   height: 2px;
+   background: #0F0E0E;
 }
 
 .hamburger:after{
-	top: 10px;
+   top: 10px;
 }
 
 /********* banner-sec ********/
 
 .banner-sec { 
-	padding: 128px 0;
+   padding: 128px 0;
 }
 .banner-sec h1{
-	font-size: 96px ;
-	font-family: 'Neue Haas Grotesk Display Pro';
-	font-weight: 700;
-	line-height: 115px;
-	letter-spacing: 2px;
-	text-transform: capitalize;
-	margin-bottom: 40px;
 	position: relative;
 	z-index: 9;
+   font-size: 96px ;
+   font-family: 'Neue Haas Grotesk Display Pro';
+   font-weight: 700;
+   line-height: 115px;
+   letter-spacing: 2px;
+   text-transform: capitalize;
+   margin-bottom: 40px;
 
 } 
 .banner-sec p{ 
-	color:rgb(15 14 14 / 60%);
-	font-size: 24px;
-	font-family: 'Work Sans', sans-serif;
-	letter-spacing: -1px;
-	margin-bottom: 64px;
+   color:rgb(15 14 14 / 60%);
+   font-size: 24px;
+   font-family: 'Work Sans', sans-serif;
+   letter-spacing: -1px;
+   margin-bottom: 64px;
 }
 .banner-sec .container{
-	max-width: 750px;
+   max-width: 750px;
 }
 .banner-sec p{
-	margin-right: 35px;
+   margin-right: 35px;
 }
 .grd-box {
-	position: relative;
-	display: block;
+   position: relative;
+   display: block;
 }
 .grdbox_left{
-	position: absolute;
-	content: "";
-	left: -145px;
-	top: -370px;
-	width: 44px;
-	height: 273px;
-	background: url(../images/img5.png) top center no-repeat;
+   position: absolute;
+   content: "";
+   left: -145px;
+   top: -370px;
+   width: 44px;
+   height: 273px;
+   background: url(../images/img5.png) top center no-repeat;
 }
 .grdbox_right{
-	position: absolute;
-	content: "";
-	right: -270px;
-	top: -170px;
-	width: 29px;
-	height: 192px;
-	background: url(../images/img4.png) top center no-repeat;
+   position: absolute;
+   content: "";
+   right: -270px;
+   top: -170px;
+   width: 29px;
+   height: 192px;
+   background: url(../images/img4.png) top center no-repeat;
 }
 
 /***********************  fmgg-sec ****************************/
 
-.fmgg-sec  + .fmgg-sec {
-	margin-top: 125px;
-}
+/* .fmgg-sec  + .fmgg-sec {
+   margin-top: 125px;
+} */
 
 .fmgg-sec .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;	
-	max-width: 984px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;	
+   max-width: 984px;
 }
 .fmgg-sec .container .left-part {
-	width: 480px;
+   width: 480px;
 } 
 .fmgg-sec .container .right-part { 
-	width: calc(100% - 544px);
-	margin-left: 20px;
+   width: calc(100% - 544px);
+   margin-left: 20px;
 }
 .fmgg-sec .container .right-part h4 { 
-	font-size: 18px;
-	color: #EF8081;
-	font-weight: 600;
-	letter-spacing: 3px;
-	font-family: 'Work Sans', sans-serif;
+   font-size: 18px;
+   color: #EF8081;
+   font-weight: 600;
+   letter-spacing: 3px;
+   font-family: 'Work Sans', sans-serif;
 }
 .fmgg-sec .container .right-part h2 { 
-	font-size: 32px;
-	color: #0F0E0E;
-	line-height: 52px;
-	margin: 8px 0 40px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	font-family: 'Neue Haas Grotesk Display Pro';
+   font-size: 32px;
+   color: #0F0E0E;
+   line-height: 52px;
+   margin: 8px 0 40px;
+   font-weight: 600;
+   letter-spacing: 2px;
+   font-family: 'Neue Haas Grotesk Display Pro';
 }
 
 .fmgg-sec .container .right-part p{
-	font-weight: 400;
-	color: #696767;
-	font-size: 16px;
-	line-height: 26px;
-	font-family: 'Work Sans', sans-serif;
-	margin-bottom: 48px;
+   font-weight: 400;
+   color: #696767;
+   font-size: 16px;
+   line-height: 26px;
+   font-family: 'Work Sans', sans-serif;
+   margin-bottom: 48px;
 }
 
 .fmgg-sec .container .right-part .btn {
-	box-shadow: none;
-	outline: none;
-	border: 1px solid rgba(229, 54, 23, 0.4);
-	padding: 12px 20px;
-	color: #E53617;
-	border-radius: 0px;
-	position: relative;
-	overflow: hidden;
-	transition: all .3s;
+   box-shadow: none;
+   outline: none;
+   border: 1px solid rgba(229, 54, 23, 0.4);
+   padding: 12px 20px;
+   color: #E53617;
+   border-radius: 0px;
+   position: relative;
+   overflow: hidden;
+   transition: all .3s;
 }
 
 .fmgg-sec .container .right-part .btn:before {
@@ -275,37 +296,67 @@ header .container {
 .fmgg-sec .container .right-part .btn:hover {
 		color: #fff;
 }
-
 .fmgg-sec .container .right-part .btn:hover::before {
 	left: 0%;
-	transition: all .3s;
+	transition: all .3s; 
+}
+.fmgg-sec .container .right-part .btn:before,
+.fmgg-sec .container .right-part .btn:after  {
+   content: "";
+   position: absolute;
+   display: block;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+.fmgg-sec .container .right-part .btn:before{
+	transform: translate3d(-100%, 0, 0);
+	 background-color: #fff;
+	 border: 1px solid #fff;
+	 transition: transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
 
+.fmgg-sec .container .right-part .btn:after{
+	background-color: #f5fa60;
+   border: 1px solid #f5fa60;
+   transform: translate3d(100%, 0, 0);
+   transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+
+.fmgg-sec .container .right-part .btn:hover::before {
+ transform: translate3d(0, 0, 0);
+}
+
+.fmgg-sec .container .right-part .btn:hover::after {
+ transform: translate3d(0, 0, 0);
 }
 
 
 
 .fmgg-sec .container .right-part .btn  span {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: rgba(229, 54, 23, 0.05);
-	display: inline-block;
-	vertical-align: middle;
-	margin-left: 12px;
-	position: relative;
-	overflow: hidden;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: rgba(229, 54, 23, 0.05);
+   display: inline-block;
+   vertical-align: middle;
+   margin-left: 12px;
+   position: relative;
+   overflow: hidden;
 }
 
 .fmgg-sec .container .right-part .btn  span:after{
-	position: absolute;
-	content: "";
-	background: url(../images/arrow.png) top center no-repeat;
-	top: 7px;
-	left: 6px;
-	width: 8px;
-	height: 7px;
-	background-size: 100%;
-	
+   position: absolute;
+   content: "";
+   background: url(../images/arrow.png) top center no-repeat;
+   top: 7px;
+   left: 6px;
+   width: 8px;
+   height: 7px;
+   background-size: 100%;
+   
 }
 .fmgg-sec .container .right-part .btn:hover span {
 	background: rgb(220, 65, 112);
@@ -316,60 +367,66 @@ header .container {
 	background-size: 100%;
 	overflow: hidden;	
 	transition: all .3s;
+   animation: arrow 1s linear .3s infinite;
+   overflow: hidden;	
+   transition: all .3s;
 }
 
 @keyframes arrow {
-	0%{transform:translateX(-10px);}
-  	50%{transform:translateX(0px);}
-  	70%{transform:translateX(5px);}
-  	100%{transform:translateX(10px);}
+   0%{transform:translateX(-10px);}
+	 50%{transform:translateX(0px);}
+	 70%{transform:translateX(5px);}
+	 100%{transform:translateX(10px);}
 }
 
 
 /*********** clint-sec **************/
 
 .clint-sec  { 
-	margin: 160px 0;
+   margin: 160px 0;
 }
 
+.clint-sec .contianer {
+   
+}
 .main-title span{ 
-	position: relative;
-	font-weight: bold;
-	color: #0F0E0E;
-	font-family: 'Neue Haas Grotesk Display Pro';
-	font-size: 56px;
-	line-height: 84px;
-	display: inline-block;
+   position: relative;
+   font-weight: bold;
+   color: #0F0E0E;
+   font-family: 'Neue Haas Grotesk Display Pro';
+   font-size: 56px;
+   line-height: 84px;
+   display: inline-block;
 }
 .main-title span:before{
-	position: absolute;
-	content: "";
-	top: -40px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #000;
+   position: absolute;
+   content: "";
+   top: -40px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: #000;
 }
 
 .cl-list {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	flex-wrap: wrap;
-	border: 1px solid #fff;
-	border-bottom: none;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   flex-wrap: wrap;
+   border: 1px solid #fff;
+   border-bottom: none;
 }
 .cl-list li { 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: calc(100%/4);	
-	height: 180px;
-	border-right: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: calc(100%/4);	
+   height: 180px;
+   border-right: 1px solid #fff;
+   border-bottom: 1px solid #fff;
 }
 .cl-list li:nth-child(4n+4){ 
-	border-right: none;
+   border-right: none;
 } 
 
 /****** service-sec *******/
@@ -421,4 +478,21 @@ font-family: 'Work Sans', sans-serif; color: #0F0E0E; position: relative; z-inde
 	 font-weight: 400;
 	 font-size: 16px;
 	 line-height: 25px;
+font-family: 'Work Sans', sans-serif; color: #0F0E0E; }
+
+/* Aniruddh */
+.panel.align-top {
+   align-items: flex-start;
 }
+
+.portfolio {
+   margin: 0;
+   height: 100%;
+   overflow-scrolling: touch;
+   --webkit-overflow-scrolling: touch;
+}
+
+.panel {
+   width: 100%;
+   height: 100%;
+} 
