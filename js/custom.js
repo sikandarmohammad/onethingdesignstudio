@@ -13,6 +13,9 @@ tl.from('.grdbox_left', {
     "height": "0px",
 }, '-=2');
 
+  
+  
+
 var cursor = document.querySelector('.cursor'),
     cursorScale = document.querySelectorAll('.cursor-scale'),
     mouseX = 0,
