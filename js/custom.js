@@ -1,14 +1,18 @@
-var rule = CSSRulePlugin.getRule('.grd-box:before');
 
-// var tl = gsap.timeline({
-//     defaults: {duration: 1}
-// });
-
-gsap.from('.grd-box', {
-    y: -500,
-    opacity: 0,
-    duration: 1.5
+var tl = gsap.timeline({
+    defaults: {duration: 2}
 });
+
+tl.from('.grdbox_left', {
+    y: -400,
+    opacity: 0,
+    "height": "0px",
+}).from('.grdbox_right', {
+    y: 400,
+    opacity: 0,
+    "height": "0px",
+}, '-=2');
+
 var cursor = document.querySelector('.cursor'),
     cursorScale = document.querySelectorAll('.cursor-scale'),
     mouseX = 0,
